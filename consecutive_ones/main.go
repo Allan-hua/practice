@@ -25,7 +25,7 @@ func logestRun(num int) int {
 	b := uint64(num)
 	var max, tmp int
 	for i := 0; i < 64; i++ {
-		if b&(1<<uint(i)) != 0 {
+		if b&(i<<uint(1)) != 0 {
 			tmp++
 		} else if tmp > max {
 			max = tmp
